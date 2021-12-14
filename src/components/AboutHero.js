@@ -44,8 +44,8 @@ const HeroCardContainer = styled.div`
     justify-items: center;
     box-shadow: 0 2px 20px #000;
     border-radius: 10px;
-    width: 750px;
-    height: 500px;
+    width: 30vw;
+    height: calc(30vw*0.66666);
 
     @media screen and (max-width: 1200px) {
         grid-template-columns: 1fr;
@@ -56,9 +56,9 @@ const HeroCardContainer = styled.div`
 
 const HeroImage = styled.img`
     object-fit: cover;
-    width: 400px;
-    height: 400px;
-    margin-left: 50px;
+    width: 15vw;
+    height: 15vw;
+    margin-left: 2.5vw;
     border: solid;
 
     @media screen and (max-width: 1200px) {
