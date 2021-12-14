@@ -10,7 +10,7 @@ const Footer = () => {
             </ContactContainer>
             <LinksContainer>
                 <a href="mailto:paulpinto.gamedesign@gmail.com">Email</a>
-                <a href="https://www.linkedin.com/in/paul-pinto-game-design">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/paul-v-pinto">LinkedIn</a>
                 <a href="https://drive.google.com/file/d/1nypHRYx9ksAlSql9SSHYU5lslMTQgbMo/view?usp=sharing">Resume</a>
             </LinksContainer>
         </FooterContainer>
