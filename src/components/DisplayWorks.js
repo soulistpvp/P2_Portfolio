@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Link } from "gatsby"
+import { motion } from "framer-motion"
 
 const DisplayWorks = ({heading}) => {
   const data = useStaticQuery(graphql`
@@ -27,8 +28,19 @@ function getWorks(data){
   const worksArray = []
   data.allWorksJson.edges.forEach((item, index) => {
     worksArray.push(
-      <WorkLink key={index} paintDrip to={item.node.link} duration={1} hex="#eeb902" >
-        <WorkCard key={index} image={item.node.img.publicURL}>
+      <WorkLink key={index} to={item.node.link}  >
+        <WorkCard key={index} image={item.node.img.publicURL} 
+        whileHover={{
+          position: `relative`,
+          zIndex: 200,
+          scale: 1.2,
+          transition: {
+            type: `spring`,
+            stiffness: 300,
+            duration: 0.5
+          }
+        }} 
+        >
             <CardInfo>
               <p>{item.node.name}</p>
               <p>{item.node.info}</p>
@@ -93,7 +105,7 @@ const WorkWrapper = styled.div`
   }
 `
 
-const WorkCard = styled.div`
+const WorkCard = styled(motion.div)`
   box-shadow: 0 2px 20px #000;
   border-radius: 10px;
   width: 100%;
@@ -111,10 +123,14 @@ const WorkCard = styled.div`
   justify-content: space-between;
   cursor: pointer;
 
+
   &:hover{
     filter: brightness(100%);
+    width: 30vw;
+    @media screen and (max-width: 1200px) {
+        width: 100%;
+    }
     div:nth-child(1){
-      width: 30vw;
       visibility: visible;
 
       @media screen and (max-width: 1200px) {
@@ -136,6 +152,7 @@ const CardInfo = styled.div`
   color: #000;
   text-decoration: none;
   border-radius: 10px;
+
 
   p:nth-child(1){
     font-family: "Montserrat";

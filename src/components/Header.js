@@ -4,12 +4,13 @@ import styled from "styled-components"
 import { FaBars } from "react-icons/fa"
 import { menuData } from "../data/MenuData"
 import Menu from "./Menu"
+import { motion } from "framer-motion"
+
 
 class Header extends React.Component {
   toggleMenu() {
     this.childMenu.open()
   }
-
   render() {
     return (
       <HeaderContainer>
