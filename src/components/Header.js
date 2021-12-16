@@ -2,7 +2,6 @@ import * as React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { FaBars } from "react-icons/fa"
-
 import { menuData } from "../data/MenuData"
 import Menu from "./Menu"
 
@@ -13,6 +12,7 @@ class Header extends React.Component {
 
   render() {
     return (
+      <HeaderContainer>
       <Nav>
         <NameLink to="/">Paul Pinto</NameLink>
         <Menu ref={el => (this.childMenu = el)} />
@@ -20,26 +20,32 @@ class Header extends React.Component {
         <NavMenu>
           {menuData.map((item, index) => (
             <NavLink to={item.link} key={index}>
-              {item.title}
+                {item.title}
             </NavLink>
           ))}
         </NavMenu>
       </Nav>
+      </HeaderContainer>
     )
   }
 }
 
 export default Header
 
-const Nav = styled.nav`
-  background: transparent;
+const HeaderContainer = styled.header`
   height: 80px;
+  z-index: 200;
+  position: sticky;
+  top: 0;
+`
+
+const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  z-index: 100;
-  position: sticky;
-  top: 0;
+  position: fixed;
+  background-color: rgba(255,255,255,0.7);
+  width: 100%;
 `
 
 const NameLink = styled(Link)`
@@ -94,6 +100,9 @@ const Bars = styled(FaBars)`
 const NavMenu = styled.div`
   display: flex;
   align-items: flex-end;
+  position: fixed;
+  padding-top: 0.5rem;
+  right: 0;
 
   @media screen and (max-width: 768px) {
     display: none;

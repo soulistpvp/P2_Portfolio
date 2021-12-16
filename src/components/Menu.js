@@ -21,13 +21,13 @@ class Menu extends React.Component {
                 onKeyDown={() => this.close()}
             >
                 <LinksContainer>
-                    <Link to="/works">Works</Link>
-                    <Link to="/about">About</Link>
+                    <Link paintDrip to="/works" duration={1} hex="#eeb902">Works</Link>
+                    <Link paintDrip to="/about" duration={1} hex="#eeb902">About</Link>
                     <a href="mailto:paulpinto.gamedesign@gmail.com">Email</a>
                     <a href="https://www.linkedin.com/in/paul-v-pinto">LinkedIn</a>
                     <a href="https://drive.google.com/file/d/1nypHRYx9ksAlSql9SSHYU5lslMTQgbMo/view?usp=sharing">Resume</a>
                 </LinksContainer>
-                <NameLink to="/"> Paul Pinto </NameLink>
+                <NameLink paintDrip to="/" duration={1} hex="#eeb902"> Paul Pinto </NameLink>
                 <Times/>
             </MenuContainer>
         )

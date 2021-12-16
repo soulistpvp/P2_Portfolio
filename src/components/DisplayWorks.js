@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
+import { Link } from "gatsby"
 
 const DisplayWorks = ({heading}) => {
   const data = useStaticQuery(graphql`
@@ -26,7 +27,7 @@ function getWorks(data){
   const worksArray = []
   data.allWorksJson.edges.forEach((item, index) => {
     worksArray.push(
-      <WorkLink key={index} to={item.node.link}>
+      <WorkLink key={index} paintDrip to={item.node.link} duration={1} hex="#eeb902" >
         <WorkCard key={index} image={item.node.img.publicURL}>
             <CardInfo>
               <p>{item.node.name}</p>
@@ -82,7 +83,7 @@ const WorkWrapper = styled.div`
   justify-content: center;
   margin: 0;
   padding: 0;
-
+  
   @media screen and (max-width: 1600px) {
     grid-template-columns: 1fr 1fr;
   }
@@ -99,7 +100,6 @@ const WorkCard = styled.div`
   height: 500px;
   margin: 0;
   padding: 0;
-  transition: width 2s;
 
   background-image: url(${props => props.image});
   background-repeat: no-repeat;
@@ -110,9 +110,6 @@ const WorkCard = styled.div`
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-
-  filter: brightness(80%);
-  transition: 0.4s cubic-bezier(0.075, 0.2, 0.165, 1);
 
   &:hover{
     filter: brightness(100%);
@@ -135,7 +132,7 @@ const CardInfo = styled.div`
   background: #fff;
   width: 100%;
   padding: 1rem;
-  margin: 1rem;
+  margin: 0;
   color: #000;
   text-decoration: none;
   border-radius: 10px;
