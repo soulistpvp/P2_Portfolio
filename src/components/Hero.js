@@ -5,15 +5,15 @@ const Hero = () => {
     return (
         <HeroContainer>
             <HeroItems>
-                <p> WELCOME TO MY {<br />} PORTFOLIO, I AM A {<br />} GAME DESIGNER </p>
-                <p> WELCOME TO MY {<br />} PORTFOLIO, I AM A {<br />} GAME DESIGNER </p>
-                <p> WELCOME TO MY {<br />} PORTFOLIO, I AM A {<br />} GAME DESIGNER </p>
-                <p> WELCOME TO MY {<br />} PORTFOLIO, I AM A {<br />} GAME DESIGNER </p>
-                <p> WELCOME TO MY {<br />} PORTFOLIO, I AM A {<br />} {<strong> GAME DESIGNER  </strong>} </p>
-                <p> WELCOME TO MY {<br />} PORTFOLIO, I AM A {<br />} GAME DESIGNER </p>
-                <p> WELCOME TO MY {<br />} PORTFOLIO, I AM A {<br />} GAME DESIGNER </p>
-                <p> WELCOME TO MY {<br />} PORTFOLIO, I AM A {<br />} GAME DESIGNER </p>
-                <p> WELCOME TO MY {<br />} PORTFOLIO, I AM A {<br />} GAME DESIGNER </p>
+                <p> WELCOME TO MY {<br />} PORTFOLIO, I'M A {<br />} GAME DESIGNER </p>
+                <p> WELCOME TO MY {<br />} PORTFOLIO, I'M A {<br />} GAME DESIGNER </p>
+                <p> WELCOME TO MY {<br />} PORTFOLIO, I'M A {<br />} GAME DESIGNER </p>
+                <p> WELCOME TO MY {<br />} PORTFOLIO, I'M A {<br />} GAME DESIGNER </p>
+                <p> WELCOME TO MY {<br />} PORTFOLIO, I'M A {<br />} {<strong> GAME DESIGNER  </strong>} </p>
+                <p> WELCOME TO MY {<br />} PORTFOLIO, I'M A {<br />} GAME DESIGNER </p>
+                <p> WELCOME TO MY {<br />} PORTFOLIO, I'M A {<br />} GAME DESIGNER </p>
+                <p> WELCOME TO MY {<br />} PORTFOLIO, I'M A {<br />} GAME DESIGNER </p>
+                <p> WELCOME TO MY {<br />} PORTFOLIO, I'M A {<br />} GAME DESIGNER </p>
             </HeroItems>
         </HeroContainer>
     )
