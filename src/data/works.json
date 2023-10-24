@@ -21,8 +21,8 @@
             {"src": "../assets/images/innertune/intro.gif", "caption": "During the intro and outro the boss attacks with these screens that push the player away."}
         ],
         "herodata": [
-            {"role": "Game Developer",
-            "role2": "Game Designer",
+            {"role": "Game Designer",
+            "role2": "Programmer",
             "skills": "Unreal Engine 4",
             "skills2": "Blueprints",
             "genre": "Rhythm",
@@ -79,8 +79,8 @@
             {"src": "../assets/images/guidingsouls/features.gif", "caption": "Example of our dialogue and VFX features."}
         ],
         "herodata": [
-            {"role": "Programmer",
-            "role2": "Game Designer",
+            {"role": "Game Designer",
+            "role2": "Programmer",
             "skills": "Unity",
             "skills2": "C#",
             "genre": "Puzzle",
@@ -109,7 +109,7 @@
         ],
         "herodata": [
             {"role": "Project Manager",
-            "role2": "Game Developer",
+            "role2": "Programmer",
             "skills": "Unreal Engine 4",
             "skills2": "Blueprints",
             "genre": "RPG",
